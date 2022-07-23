@@ -130,7 +130,11 @@ fun DefaultPreview() {
 fun MyApp(content: @Composable () -> Unit) {
     JetTipAppTheme() {
         Surface(color = MaterialTheme.colors.background) {
-            content()
+            Column(modifier = Modifier.padding(12.dp)) {
+                TopHeader()
+
+                MainContent()
+            }
         }
     }
 
